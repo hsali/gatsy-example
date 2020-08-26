@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Header from "../components/header"
+import Container from "../components/container"
 
 const IndexPage = () => (
   <Layout>
@@ -19,4 +21,13 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default function Home() {
+  return (
+    <Container>
+      <Header headerText="Home Page"/>
+      <h1>Hello world</h1>
+      <p>what a world</p>
+      <img src="https://source.unsplash.com/random/400x200" alt="" />
+    </Container>
+  )
+}
