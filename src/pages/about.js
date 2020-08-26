@@ -1,9 +1,6 @@
 import React from "react"
-import SEO from "../components/seo"
-import Header from "../components/header"
-import Container from "../components/container"
-import styles from './about-css-module.css'
-
+import styles from "./about-css-module.css"
+import Layout from "../components/layout"
 
 const User = props => (
   <div className={styles.user}>
@@ -15,25 +12,15 @@ const User = props => (
   </div>
 )
 
-
 export default function About() {
   return (
-    <Container>
-      <SEO title="About Us" />
-      <Header headerText="About Page"/>
-      <h1>About CSS Modules</h1>
-      <p>CSS Modules are cool</p>
-      <User
-        username="Jane Doe"
-        avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-        excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-      />
-      <User
-        username="Bob Smith"
-        avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-        excerpt="I'm Bob Smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-      />
-
-    </Container>
+    <Layout>
+    <div>
+      <h1>About me</h1>
+      <p>
+        I’m good enough, I’m smart enough, and gosh darn it, people like me!
+      </p>
+    </div>
+    </Layout>
   )
 }
