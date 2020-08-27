@@ -6,13 +6,13 @@ import { rhythm } from "../utils/typography"
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
-        query {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
+      query {
+        site {
+          siteMetadata {
+            title
+          }
         }
+      }
     `
   )
   return (
@@ -38,15 +38,15 @@ export default function Layout({ children }) {
       <Link
         to={`/`}
         css={css`
-          margin: 10px
+          margin: 10px;
         `}
       >
-       Home
+        Home
       </Link>
       <Link
         to={`/about/`}
         css={css`
-          margin: 10px
+          margin: 10px;
         `}
       >
         About
@@ -55,7 +55,7 @@ export default function Layout({ children }) {
       <Link
         to={`/my-files/`}
         css={css`
-          margin: 10px
+          margin: 10px;
         `}
       >
         My Files
