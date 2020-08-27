@@ -1,26 +1,25 @@
 import React from "react"
-import styles from "./about-css-module.css"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-const User = props => (
-  <div className={styles.user}>
-    <img src={props.avatar} className={styles.avatar} alt="" />
-    <div className={styles.description}>
-      <h2 className={styles.username}>{props.username}</h2>
-      <p className={styles.excerpt}>{props.excerpt}</p>
-    </div>
-  </div>
-)
-
-export default function About() {
+export default function About({ data }) {
   return (
     <Layout>
-    <div>
-      <h1>About me</h1>
+      <h1>About {data.site.siteMetadata.title}</h1>
       <p>
-        I’m good enough, I’m smart enough, and gosh darn it, people like me!
+        We're the only site running on your computer dedicated to showing the
+        best photos and videos of pandas eating lots of food.
       </p>
-    </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+            }
+        }
+    }
+`
