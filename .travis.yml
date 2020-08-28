@@ -2,8 +2,7 @@ language: node_js
 before_script:
   - npm install -g gatsby-cli
   - yarn install
-  - yarn build
-  - ls -la
+  - yarn run build
 node_js:
   - "10"
 
