@@ -42,7 +42,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://c1d99c528a15bfde5ab0629ea33b3f018da5e423@github.com/hsali/gatsy-example"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/hsali/gatsy-example"
   },
   "repository": {
     "type": "git",
